@@ -14,11 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
--- Dumping database structure for elite_exam_db
-CREATE DATABASE IF NOT EXISTS `elite_exam_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `elite_exam_db`;
-
 -- Dumping structure for table elite_exam_db.sales_report
 CREATE TABLE IF NOT EXISTS `sales_report` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -31,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `sales_report` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table elite_exam_db.sales_report: ~118 rows (approximately)
+-- Dumping data for table elite_exam_db.sales_report: ~119 rows (approximately)
 INSERT INTO `sales_report` (`id`, `album_cover`, `artist`, `album`, `2022_sales`, `date_released`, `last_update`) VALUES
 	(1, NULL, 'AB6IX', 'Complete with You: Special Album', 43058, '2022-01-17', '2022-01-31'),
 	(2, NULL, 'aespa', 'Savage', 19629, '2021-10-05', '2022-04-30'),
@@ -114,16 +109,16 @@ INSERT INTO `sales_report` (`id`, `album_cover`, `artist`, `album`, `2022_sales`
 	(79, NULL, 'Rocket Punch', 'Yellow Punch', 20055, '2022-02-28', '2022-04-30'),
 	(80, NULL, 'Seventeen', 'Attacca', 30049, '2021-10-22', '2022-04-30'),
 	(81, NULL, 'Solar', 'Face', 43599, '2022-03-16', '2022-04-30'),
-	(82, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 56940, '2021-12-27', '2022-01-31'),
-	(83, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 12971, '2021-12-27', '2022-03-31'),
-	(84, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 5974, '2021-12-27', '2022-03-31'),
-	(85, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 74162, '2021-12-27', '2022-03-31'),
-	(86, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 74087, '2021-12-27', '2022-03-31'),
-	(87, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 41833, '2021-12-27', '2022-03-31'),
-	(88, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 5265, '2021-12-27', '2022-01-31'),
-	(89, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 62545, '2021-12-27', '2022-03-31'),
-	(90, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 14336, '2021-12-27', '2022-01-31'),
-	(91, 'uploaded_albums/SMTOWN.jpg', 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 2218, '2021-12-27', '2022-01-31'),
+	(82, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 56940, '2021-12-27', '2022-01-31'),
+	(83, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 12971, '2021-12-27', '2022-03-31'),
+	(84, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 5974, '2021-12-27', '2022-03-31'),
+	(85, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 74162, '2021-12-27', '2022-03-31'),
+	(86, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 74087, '2021-12-27', '2022-03-31'),
+	(87, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 41833, '2021-12-27', '2022-03-31'),
+	(88, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 5265, '2021-12-27', '2022-01-31'),
+	(89, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 62545, '2021-12-27', '2022-03-31'),
+	(90, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 14336, '2021-12-27', '2022-01-31'),
+	(91, NULL, 'SMTOWN', '2021 Winter SMTOWN: SMCU Express', 2218, '2021-12-27', '2022-01-31'),
 	(92, NULL, 'Suho', 'Gray Suit', 186465, '2022-04-04', '2022-04-30'),
 	(93, NULL, 'StayC', 'Young-Luv.com', 182131, '2022-02-21', '2022-04-30'),
 	(94, NULL, 'Stray Kids', 'Christmas EveL', 14418, '2021-11-29', '2022-04-30'),
@@ -144,13 +139,14 @@ INSERT INTO `sales_report` (`id`, `album_cover`, `artist`, `album`, `2022_sales`
 	(109, NULL, 'Viviz', 'Beam of Prism', 43638, '2022-02-10', '2022-02-28'),
 	(110, NULL, 'Weeekly', 'Play Game: Awake', 81537, '2022-03-07', '2022-03-31'),
 	(111, NULL, 'WEi', 'Love Pt. 1: First Love', 119853, '2022-03-16', '2022-03-31'),
+	(112, NULL, 'Wheein', 'Whee', 69470, '2022-01-17', '2022-01-31'),
 	(113, NULL, 'Wonho', 'Obsession', 56627, '2022-02-16', '2022-03-31'),
 	(114, NULL, 'Wonpil', 'Pilmography', 33668, '2022-02-10', '2022-02-28'),
 	(115, NULL, 'WJSN Chocome', 'Super Yuppers!', 15135, '2022-01-05', '2022-01-31'),
 	(116, NULL, 'Younha', 'End Theory Final Ed.', 7001, '2022-03-30', '2022-03-31'),
 	(117, NULL, 'Yoon Jisung', 'Miro', 6595, '2022-04-27', '2022-04-30'),
-	(118, 'uploaded_albums/album_1747650131.gif', 'Younite', 'Youni-Birth', 21927, '2022-04-22', '2022-04-30'),
-	(119, '', 'Yuju1', 'Rec.aa', 22970, '2022-01-21', '2022-01-31');
+	(118, NULL, 'Younite', 'Youni-Birth', 21927, '2022-04-22', '2022-04-30'),
+	(119, NULL, 'Yuju', 'Rec.', 22970, '2022-01-21', '2022-01-31');
 
 -- Dumping structure for table elite_exam_db.users
 CREATE TABLE IF NOT EXISTS `users` (
