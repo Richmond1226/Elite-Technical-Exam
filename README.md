@@ -1,6 +1,18 @@
 # Elite-Technical-Exam
 
 
+
+**Instruction:** 
+Database Name: elite_exam_db
+
+**Credentials:**
+Username: Richmond1226
+
+Password: 123
+
+
+
+
 **Completed Task: 
 **
 
