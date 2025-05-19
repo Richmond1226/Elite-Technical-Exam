@@ -14,24 +14,24 @@
 5.  Display list of albums based on the searched artist
 
 
-Laravel / PHP Procedural: 
+**Laravel / PHP Procedural: **
 ALBUMS
-  		FIELDS
-  	  	YEAR
-        	NAME
-        	SALES
-        	FUNCTIONS
-        	  	- read the full details of album
-        	  	- update
-  	        	- delete	
-              - add a picture of album cover 
+FIELDS
+YEAR
+NAME
+SALES
+FUNCTIONS
+- read the full details of album
+- update
+- delete	
+- add a picture of album cover 
 
 
-Login
-  	- admin user can perform logout functionality
-  	- credentials must be username and password
+**Login**
+- admin user can perform logout functionality
+- credentials must be username and password
 
-Dashboard: 
+**Dashboard**: 
 - Display list of albums based on the searched artist
 - Display the top 1 artist who sold most combined album sales
 - Display combined album sales per artist 
