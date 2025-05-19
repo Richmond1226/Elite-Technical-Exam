@@ -1,0 +1,119 @@
+
+1.  Display total number of albums sold per artist
+#--------------------------------------------------------
+SELECT 
+    artist,
+    COUNT(DISTINCT album) AS total_albums
+FROM 
+    sales_report
+GROUP BY 
+    artist;
+
+#--------------------------------------------------------
+
+
+
+
+
+
+
+
+2.  Display combined album sales per artist
+
+#--------------------------------------------------------
+
+SELECT 
+    artist,
+    SUM(`2022_sales`) AS combined_sales
+FROM 
+    sales_report
+GROUP BY 
+    artist;
+
+
+#--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+3.  Display the top 1 artist who sold most combined album sales
+
+#--------------------------------------------------------
+
+SELECT 
+    artist,
+    SUM(`2022_sales`) AS total_sales,
+    RANK() OVER (ORDER BY SUM(`2022_sales`) DESC) AS rank
+FROM 
+    sales_report
+GROUP BY 
+    artist;
+
+
+#--------------------------------------------------------
+
+
+
+
+
+
+
+
+4.  Display the top 10 albums per year based on their number of sales
+
+#--------------------------------------------------------
+
+SELECT *
+FROM (
+    SELECT 
+        artist,
+        album,
+        `2022_sales` AS sales,
+        date_released AS release_year,
+        ROW_NUMBER() OVER (
+            PARTITION BY YEAR(date_released)
+            ORDER BY `2022_sales` DESC
+        ) AS rank
+    FROM 
+        sales_report
+) AS ranked_albums
+WHERE rank <= 10;
+
+
+#--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+5.  Display list of albums based on the searched artist
+
+#--------------------------------------------------------
+
+SELECT 
+    artist,
+    album,
+    `2022_sales`,
+    date_released AS release_date
+FROM 
+    sales_report
+WHERE 
+    artist = 'SMTOWN';
+
+or 
+
+SELECT album, 2022_sales FROM sales_report WHERE artist LIKE '%$artist%' GROUP BY album
+
+#--------------------------------------------------------
