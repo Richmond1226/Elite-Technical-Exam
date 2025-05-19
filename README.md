@@ -6,9 +6,20 @@
 Database Name: elite_exam_db
 
 **Credentials:**
+
+
 Username: Richmond1226
 
 Password: 123
+
+
+
+
+All made with PHP Procedural
+
+
+
+
 
 
 
